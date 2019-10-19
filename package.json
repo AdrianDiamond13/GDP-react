@@ -7,7 +7,7 @@
         "build-webpack": "webpack",
         "webpack-dev": "webpack-dev-server"
     },
-    "author": "Jay Cogen",
+    "author": "Adrian Diamond",
     "license": "ISC",
     "dependencies": {
         "css-loader": "^0.28.11",
@@ -19,6 +19,7 @@
         "react": "^16.2.0",
         "react-dom": "^16.3.1",
         "react-redux": "^5.0.7",
+        "react-router-dom": "^5.1.0",
         "redux": "^4.0.0",
         "redux-devtools-extension": "^2.13.5",
         "redux-thunk": "^2.3.0",
@@ -34,7 +35,7 @@
         "babel-loader": "^8.0.5",
         "body-parser": "^1.18.3",
         "dotenv": "^6.2.0",
-        "nodemon": "^1.18.9",
+        "nodemon": "^1.19.2",
         "request": "^2.88.0",
         "webpack-cli": "^3.1.1",
         "webpack-dev-server": "^3.1.14"

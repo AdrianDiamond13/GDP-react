@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import MainContainer from './containers/MainContainer.jsx';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 
 class App extends Component {
     constructor(props) {
@@ -9,9 +12,11 @@ class App extends Component {
     render() {
 
         return (
-            <div>
-                WELCOME BACK JAY
-            </div>
+            <Router>
+                <div>
+                    <MainContainer/>  
+                </div>
+            </Router>
         )
     }
 
