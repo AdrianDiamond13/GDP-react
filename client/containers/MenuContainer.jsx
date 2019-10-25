@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import MenuItem from '../components/MenuItemComponent.jsx'
+import { BrowserRouter as Router } from 'react-router-dom';
+
+
 
 class MenuContainer extends Component{
     constructor(props){
@@ -33,8 +36,13 @@ class MenuContainer extends Component{
     render(){
         console.log("state", this.state)
         return(
+            
     <div className="menu">
-
+    <div>
+    <Link to="/" onClick={this.props.toggle}>
+    <img className="diamond-icon" src="../../assets/green-diamond-icon.png" alt="GDP icon" width="100" height="100"></img>
+    </Link>
+    </div>
     <MenuItem component={Link} to={'/home'} name='HOME' id="home" state ={this.state} changeFont={this.changeFont}></MenuItem>
     <MenuItem component={Link} to={'/about'} name='ABOUT' id="about" state ={this.state} changeFont={this.changeFont}></MenuItem>
     <MenuItem component={Link} to={'/films'} name='FILMS' id="films" state ={this.state} changeFont={this.changeFont}></MenuItem>
