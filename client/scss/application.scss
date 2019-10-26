@@ -1,6 +1,23 @@
+@font-face {
+    font-family: 'Futura PT';
+    src: url('FuturaPT-Medium.woff2') format('woff2'),
+        url('FuturaPT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
 body {
     margin: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Futura PT';
+}
+
+.show{
+
+}
+
+.hidden{
+    display: none;
 }
 
 .maincontainer{
@@ -18,8 +35,20 @@ body {
     border-style: solid;
     border-color: black;
     padding: 100px;
+    //width: 40%;
     //height: 100%;
     background-color: black;
+}
+
+.menu a{
+    margin-left: auto;
+    margin-right: auto 
+}
+
+.diamond-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
 }
 
 // .menu h3{
@@ -85,6 +114,7 @@ body {
     //border-style: solid;
     border-color: lime;
     padding: 30px;
+    font-size: 20;
 }
 
 .about-view{

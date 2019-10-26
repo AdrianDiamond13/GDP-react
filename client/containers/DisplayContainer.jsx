@@ -7,13 +7,11 @@ import Modal from '../components/Modal.jsx';
 import TheFirebugView from '../components/TheFirebugView.jsx';
 import GenerationsView from '../components/GenerationsView.jsx';
 import TheNightFromHellView from '../components/TheNightFromHellView.jsx';
+import Diamond from '../components/Diamond.jsx';
 //import components for the routes
 
 
-// const DisplayContainer = props => (
-// <div className="display">  
-// </div>
-// );
+
 
 class DisplayContainer extends Component {
     constructor(props){
@@ -42,6 +40,10 @@ class DisplayContainer extends Component {
         return (
         <div className={displayClass}>
             <Switch>
+                <Route
+                exact path='/main'
+                component={HomeView}
+                />
                 <Route
                     exact path='/home'
                     component={HomeView}
@@ -93,7 +95,7 @@ class DisplayContainer extends Component {
                 />
                 <Route
                     exact path='/contact'
-                    render={() => <h1>Adrian@GDP.com</h1>}
+                    render={() => <h1>Adrian@GreenDiamondProjects.com</h1>}
                 />
             </Switch>
         </div>
