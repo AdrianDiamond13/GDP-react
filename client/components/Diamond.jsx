@@ -78,7 +78,7 @@ class Diamond extends Component{
           this.isMouseOver = true
           // console.log('INTERSECTION')
           this.props.toggle()
-          // console.log('this.props.history', this.props.history)
+          console.log('this.props.history', this.props.history)
           //This comes up as an TypeError...but it works so...IDK
           this.props.history('/main')
 
@@ -183,7 +183,7 @@ class Diamond extends Component{
   this.renderer.render(this.scene, this.camera)
 }
 render(){
-    //let diamondClass = this.props.state.showDiamond? "show":"hidden"
+    let diamondClass = this.props.state.showDiamond? "show":"hidden"
     // console.log("diamondClass", diamondClass)
     //PROPS ARE NOT BEING PASSED DOWN!!!
     // console.log("this.props.state", this.props.state)
@@ -201,11 +201,11 @@ render(){
       
         // <div className={diamondClass}  onClick={this.props.toggle}>
         // <Link to="/main"   onClick={this.props.toggle}>
-      <div
+      <div className={diamondClass}
         style={{ width: '20px',  height: '20px' }}
         ref={(mount) => { this.mount = mount}}
         />
-      //  </Link>
+        // </Link>
         // </div>
     )
   }

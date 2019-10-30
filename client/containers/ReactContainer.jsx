@@ -7,6 +7,7 @@ import Diamond from '../components/Diamond.jsx';
 import { BrowserRouter as Router } from 'react-router-dom';
 import MenuContainer from './MenuContainer.jsx';
 import DisplayContainer from './DisplayContainer.jsx';
+import Pages from '../components/Pages.jsx';
 
 
 
@@ -35,7 +36,9 @@ class ReactContainer extends Component {
       <div>   
 
 <Diamond toggle={this.toggle} state={this.state}/>
-<MainContainer toggle={this.toggle} state={this.state}/>
+{/* <MainContainer toggle={this.toggle} state={this.state}/> */}
+<Pages state={this.state}/>
+
 
           {/* <Switch>
           <Route
