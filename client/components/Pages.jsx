@@ -15,20 +15,22 @@ class Pages extends Component{
     constructor(props){
         super(props)
         this.state={
+            pages: {
             0: 'home',
             1: 'about',
             2: 'films',
             3: 'tv',
             4: 'music',
             5: 'arvr',
-            6: 'contact',
-            currentPage: 0,
+            6: 'contact'
+            },
+            currentIndex: 0,
             page: 'home'
         }
 
         //
         this.startingX;
-        // this.p1 = document.getElementById(this.state[this.state.currentPage]);
+        // this.p1 = document.getElementById(this.state.pages[this.state.currentIndex]);
         // this.p2 = document.getElementById(this.state[this.state.currentPage++]);
         this.p1;
         this.p2;
@@ -52,13 +54,28 @@ class Pages extends Component{
         this.p1 = document.getElementById('home');
         this.p2 = document.getElementById('about');
     }
+    
+
+
 
     //P1 HANDLERS
     p1onTouchStart(event){
         this.startingX = event.touches[0].screenX;
         console.log('this.startingX', this.startingX)
-
     }
+
+    //P2 HANDLERS
+    p2onTouchStart(event){
+        this.startingX = event.touches[0].screenX;
+        this.p1.style.transition = '';
+        this.p2.style.transition = '';
+        this.p1.style.display = 'none';
+    }
+
+
+
+
+
 
     p1onTouchMove(event){
         let touch = event.touches[0];
@@ -72,6 +89,21 @@ class Pages extends Component{
         this.p2.style.left = (screen.width - change) + 'px'
         // event.preventDefault();
     }
+
+    p2onTouchMove(event){
+        let touch = event.touches[0];
+        let change = touch.screenX - this.startingX;
+        if(change < 0){
+            return;
+        }   
+        this.p1.style.display = 'block';
+        this.p1.style.left = (change - screen.width) + 'px'
+        this.p2.style.left = change + 'px';
+        // event.preventDefault();
+        // console.log('on touch move!!')
+    }
+
+
 
     p1onTouchEnd(event){
         //console.log('event', event)
@@ -99,26 +131,7 @@ class Pages extends Component{
          }
     }
 
-    //P2 HANDLERS
-    p2onTouchStart(event){
-        this.startingX = event.touches[0].screenX;
-        this.p1.style.transition = '';
-        this.p2.style.transition = '';
-        this.p1.style.display = 'none';
-    }
 
-    p2onTouchMove(event){
-        let touch = event.touches[0];
-        let change = touch.screenX - this.startingX;
-        if(change < 0){
-            return;
-        }   
-        this.p1.style.display = 'block';
-        this.p1.style.left = (change - screen.width) + 'px'
-        this.p2.style.left = change + 'px';
-        // event.preventDefault();
-        // console.log('on touch move!!')
-    }
 
     p2onTouchEnd(event){
         //console.log('event.changedTouches', event.changedTouches[0])
@@ -138,19 +151,6 @@ class Pages extends Component{
             // p2.style.display = 'block';
         }
     }
-
-
-
-    
-
-
-
-
-
-
-
-
-
 
 
 
