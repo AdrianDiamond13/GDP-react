@@ -12,7 +12,7 @@ body {
     font-family: 'Futura PT';
 }
 
-.page1{
+.currentPage{
     position: absolute;
     top: 0;
     left: 0;
@@ -21,7 +21,7 @@ body {
     background-color:black;
     color: greenyellow;
 }
-.page2{
+.nextPage{
     position: absolute;
     top: 0;
     left: 100%;
@@ -29,6 +29,16 @@ body {
     height: 100vh;
     background-color:greenyellow;
     color: black;
+}
+
+.prevPage{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100vw;
+    height: 100vh;
+    background-color:blue;
+    color: white;
 }
 
 

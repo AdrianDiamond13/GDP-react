@@ -40,160 +40,109 @@ class Pages extends Component{
         // this.rotateCarousel = this.rotateCarousel.bind(this)
         // this.clickPrev = this.clickPrev.bind(this);
         // this.clickNext = this.clickNext.bind(this);
-        this.p1onTouchStart = this.p1onTouchStart.bind(this);
-        this.p1onTouchMove = this.p1onTouchMove.bind(this);
-        this.p1onTouchEnd = this.p1onTouchEnd.bind(this);
+        this.onTouchStart = this.onTouchStart.bind(this);
+        this.onTouchMove = this.onTouchMove.bind(this);
+        this.onTouchEnd = this.onTouchEnd.bind(this);
 
-        this.p2onTouchStart = this.p2onTouchStart.bind(this);
-        this.p2onTouchMove = this.p2onTouchMove.bind(this);
-        this.p2onTouchEnd = this.p2onTouchEnd.bind(this);
 
     }
 
     componentDidMount(){
-        this.p1 = document.getElementById('home');
-        this.p2 = document.getElementById('about');
+        this.current = document.getElementById('home');
+        this.next = document.getElementById('about');
+        this.prev = document.getElementById('contact')
     }
+
+    // setCurrentPage(){
+
+    // }
     
 
 
 
-    //P1 HANDLERS
-    p1onTouchStart(event){
+    //TOUCH START
+    onTouchStart(event){
         this.startingX = event.touches[0].screenX;
         console.log('this.startingX', this.startingX)
     }
 
-    //P2 HANDLERS
-    p2onTouchStart(event){
-        this.startingX = event.touches[0].screenX;
-        this.p1.style.transition = '';
-        this.p2.style.transition = '';
-        this.p1.style.display = 'none';
-    }
 
 
 
 
-
-
-    p1onTouchMove(event){
+    //TOUCH MOVE
+    onTouchMove(event){
         let touch = event.touches[0];
         let change = this.startingX - touch.screenX;
+        console.log('touch.screenX', touch.screenX)
         this.lastTouch = touch;
-        if(change < 0){
-            return;
-        }   
-        this.p1.style.left = '-' + change + 'px';
-        this.p2.style.display = 'block';
-        this.p2.style.left = (screen.width - change) + 'px'
-        // event.preventDefault();
+        console.log(change)
+        //Moving Right
+        // if(change<0){
+            // console.log("MOVING RIGHT BITCH")
+            this.current.style.left = Math.abs(change) + 'px';
+            this.prev.style.display = 'block';
+            this.prev.style.left = '-' + (screen.width + change) + 'px'
+        // }else if (change >0){
+            // console.log("MOVING LEFT BITCH")
+            this.current.style.left = '-' + change + 'px';
+            this.next.style.display = 'block';
+           this.next.style.left = (screen.width - change) + 'px'
+        // }   
     }
 
-    p2onTouchMove(event){
-        let touch = event.touches[0];
-        let change = touch.screenX - this.startingX;
-        if(change < 0){
-            return;
-        }   
-        this.p1.style.display = 'block';
-        this.p1.style.left = (change - screen.width) + 'px'
-        this.p2.style.left = change + 'px';
-        // event.preventDefault();
-        // console.log('on touch move!!')
-    }
+    // if(change < 0){
+        //     console.log("MOVING RIGHT BITCH")
+        //     this.current.style.left = Math.abs(change) + 'px';
+        //     this.prev.style.display = 'block';
+            //this.prev.style.left = '-' + (screen.width + change) + 'px'
 
 
 
-    p1onTouchEnd(event){
+    //TOUCH END
+    onTouchEnd(event){
         //console.log('event', event)
         //console.log('event.changedTouches', event.changedTouches)
         let change = this.startingX - this.lastTouch.screenX;
         let threshold = screen.width / 3;
-        if (change < threshold){
-            this.p1.style.left = 0;
-            this.p2.style.left = "100%";
-            this.p2.style.display = 'none';
-
+        //moving left
+        if(change > 0){
+            //moved left a little
+            if (Math.abs(change) < threshold){
+                this.current.style.left = 0;
+                this.next.style.left = "100%";
+                this.next.style.display = 'none';
+            //moved left all the way
+            }else{
+                this.current.style.transition = 'all .3s';
+                this.next.style.transition = 'all .3s';
+                this.current.style.left = '-100%';
+                this.next.style.left = '0';
+                this.next.style.display = 'block';
+            }
         }else{
-            this.p1.style.transition = 'all .3s';
-            this.p2.style.transition = 'all .3s';
-            this.p1.style.left = '-100%';
-            this.p2.style.left = '0';
-            this.p2.style.display = 'block';
-            //This means we've switched pages so make p2 the new p1
-            //and assign p2 to the next page
-        //     let currentPage = this.state.currentPage;
-        //     let page = this.state.page;
-        //     currentPage++
-        //     this.setState({currentPage: currentPage, 
-        //     page: this.state[currentPage]})
-         }
-    }
-
-
-
-    p2onTouchEnd(event){
-        //console.log('event.changedTouches', event.changedTouches[0])
-        let change = event.changedTouches[0].screenX - this.startingX;
-        let half = screen.width / 4;
-        if (change < half){
-      
-            this.p1.style.left = "-100%";
-            this.p1.style.display = 'none';
-            this.p2.style.left = 0;
-
+        //moving right
+        if (Math.abs(change) < threshold){
+            //moved right a little
+            this.prev.style.left = "-100%";
+            this.prev.style.display = 'none';
+            this.current.style.left = 0;
         }else{
-            this.p1.style.transition = 'all .3s';
-            this.p2.style.transition = 'all .3s';
-            this.p1.style.left = '0';
-            this.p2.style.left = '100%';
-            // p2.style.display = 'block';
+            //moved right all the way
+            this.prev.style.transition = 'all .3s';
+            this.current.style.transition = 'all .3s';
+            this.prev.style.left = '0';
+            this.current.style.left = '100%';
+            this.prev.style.display = 'block';
         }
+
+    }   
+         
     }
 
+   
 
 
-    // rotateCarousel() {
-    //   let angle = (this.state.selectedIndex / this.state.cellCount) * -360;
-    //   this.setState({ carouselStyle: `translateZ(-288px) rotateY(${angle}deg)`})
-    // }
-
-    // clickPrev(){
-    //     let newSelectedIndex = this.state.selectedIndex
-    //     let newCarouselPosition = this.state.carouselPosition
-    //    if (newCarouselPosition < 0){ newCarouselPosition = 6}
-    //    newSelectedIndex--;
-    //    newCarouselPosition--;
-    //         this.setState({ 
-    //             selectedIndex: newSelectedIndex,
-    //             carouselPosition: newCarouselPosition}, ()=>{
-    //             // console.log('carouselPosition', this.state[newCarouselPosition]);
-    //             console.log('this.state', this.state);
-    //             this.rotateCarousel();
-    //             this.props.history.push(this.state[newCarouselPosition]);
-           
-    //         });
-    //         console.log("clickPrev")
-    // };
-
-
-    // clickNext(){
-    //     console.log('yooo');
-    //    let newSelectedIndex = this.state.selectedIndex
-    //    let newCarouselPosition = this.state.carouselPosition
-    //    if (newCarouselPosition > 6){ newCarouselPosition = 0}
-    //    newSelectedIndex++;
-    //    newCarouselPosition++;
-    //         this.setState({ 
-    //             selectedIndex: newSelectedIndex,
-    //             carouselPosition: newCarouselPosition}, ()=>{
-    //             console.log('this.state', this.state);
-    //             this.rotateCarousel();
-    //             this.props.history.push(this.state[newCarouselPosition])
-    //         });
-    //         console.log("clickNext")
-    // }
 
 
 
@@ -206,13 +155,13 @@ class Pages extends Component{
             <div className={pagesStyle}>
        
         
-    <div className='page1' id='home'onTouchStart={this.p1onTouchStart} onTouchMove={this.p1onTouchMove} onTouchEnd={this.p1onTouchEnd}>Home</div>
-    <div className= 'page2' id='about' onTouchStart={this.p2onTouchStart} onTouchMove={this.p2onTouchMove} onTouchEnd={this.p2onTouchEnd}>About</div>
+    <div className='currentPage' id='home'onTouchStart={this.onTouchStart} onTouchMove={this.onTouchMove} onTouchEnd={this.onTouchEnd}>Home</div>
+    <div className='nextPage' id='about' onTouchStart={this.onTouchStart} onTouchMove={this.onTouchMove} onTouchEnd={this.onTouchEnd}>About</div>
     {/* <div className={page} id='films' onTouchStart={this.p2onTouchStart} onTouchMove={this.p2onTouchMove} onTouchEnd={this.p2onTouchEnd}>Films</div>
     <div className={page} id='tv' onTouchStart={this.p2onTouchStart} onTouchMove={this.p2onTouchMove} onTouchEnd={this.p2onTouchEnd}>TV</div>
     <div className={page} id='music' onTouchStart={this.p2onTouchStart} onTouchMove={this.p2onTouchMove} onTouchEnd={this.p2onTouchEnd}>Music</div>
-    <div className={page} id='arvr' onTouchStart={this.p2onTouchStart} onTouchMove={this.p2onTouchMove} onTouchEnd={this.p2onTouchEnd}>AR/VR</div>
-    <div className={page} id='contact' onTouchStart={this.p2onTouchStart} onTouchMove={this.p2onTouchMove} onTouchEnd={this.p2onTouchEnd}>Contact</div> */}
+    <div className={page} id='arvr' onTouchStart={this.p2onTouchStart} onTouchMove={this.p2onTouchMove} onTouchEnd={this.p2onTouchEnd}>AR/VR</div> */}
+    <div className='prevPage' id='contact' onTouchStart={this.onTouchStart} onTouchMove={this.onTouchMove} onTouchEnd={this.onTouchEnd}>Contact</div>
 
 </div>
             
