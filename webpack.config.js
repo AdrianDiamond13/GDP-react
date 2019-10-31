@@ -5,19 +5,12 @@ module.exports = {
     entry: './client/index.js',
     mode: 'development',
     output: {
-        path: path.resolve(__dirname, './build'),
+        path: path.resolve(__dirname, './build/'),
         filename: 'bundle.js',
     },
     devServer: {
         open: true,
-        contentBase: './',
-        publicPath: '/build/',
-        proxy: {
-            '/api': {
-                target: 'http://localhost:3000',
-                pathRewrite: { '^/api': '' }
-            }
-        }
+        contentBase:  [path.join(__dirname, 'public'),path.join(__dirname, 'build'), path.join(__dirname, 'assets')]
     },
     module: {
         rules: [
@@ -37,7 +30,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(woff(2)?|ttf|eot|svg|png|jpg|gif)(\?v=\d+\.\d+\.\d+)?$/,
                 use: [
                   {
                     loader: 'file-loader',
@@ -45,7 +38,7 @@ module.exports = {
                       name: '[name].[ext]',
                       outputPath: 'fonts/'
                     }
-                  }
+                  },
                 ]
                 }
                 
