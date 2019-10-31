@@ -86,22 +86,28 @@ body {
     scroll-snap-align: start;
   }
   
-  .green {
-    background: #ABE66F;
-  }
+//   .green {
+//     background: #ABE66F;
+//   }
   
-  .purple {
-    background: #4E4E94;
-  }
+//   .purple {
+//     background: #4E4E94;
+//   }
   
-  .orange {
-    background: #FD8F58;
-  }
+//   .orange {
+//     background: #FD8F58;
+//   }
+
+.page{
+    background-color: black;
+    color: greenyellow;
+    border: 1px dotted greenyellow;
+}
 
 
 
 .show{
-
+display: block;
 
 }
 

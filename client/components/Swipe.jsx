@@ -143,22 +143,22 @@ class Swipe extends Component{
 
 
     render(){
-        // let pagesStyle = this.props.state.showDiamond? "hidden": "show";
+        let showSwipe = this.props.state.showDiamond? "hidden": "show";
         // let page = (this.state.page === this.state[this.state.currentPage])? "page1": "page2";
         // console.log('this.state[this.state.currentPage]',this.state[this.state.currentPage])
 
         return(
 
-            <div className="swipeView">
+            <div className="swipeView" id={showSwipe}>
        
         
-    <section className='green' id='home'>Home</section>
-    <section className='purple' id='about'>About</section>
-    <section className='orange' id='films'>Films</section>
-    <section className='green' id='tv'>TV</section>
-    <section className='purple' id='music'>Music</section>
-    <section className='orange' id='arvr'>AR/VR</section> 
-    <section className='green' id='contact'>Contact</section>
+    <section className='page' id='home'>Home</section>
+    <section className='page' id='about'>About</section>
+    <section className='page' id='films'>Films</section>
+    <section className='page' id='tv'>TV</section>
+    <section className='page' id='music'>Music</section>
+    <section className='page' id='arvr'>AR/VR</section> 
+    <section className='page' id='contact'>Contact</section>
 
 </div>
             
