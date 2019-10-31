@@ -38,9 +38,6 @@ class ReactContainer extends Component {
       <div>   
 
 <Diamond toggle={this.toggle} state={this.state}/>
-{/* <MainContainer toggle={this.toggle} state={this.state}/> */}
-{/* <Pages state={this.state}/> */}
-{/* <Conveyor state={this.state}/> */}
 <Swipe state={this.state}/>
 
 

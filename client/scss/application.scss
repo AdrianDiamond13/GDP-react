@@ -107,11 +107,17 @@ body {
 
 
 .show{
-display: block;
 
 }
 
 .hidden{
+    display: none;
+}
+#show{
+
+}
+
+#hidden{
     display: none;
 }
 

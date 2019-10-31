@@ -34,7 +34,7 @@ class TheFirebugView extends Component{
 
                 <div className="thefirebug-poster">
                     {/* POSTER IMAGE HERE */}
-                    <img src="../../assets/thefirebug_specposter.jpg" alt="The Firebug Poster" width="330" height="550"></img>
+                    <img src="../../thefirebug_specposter.jpg" alt="The Firebug Poster" width="330" height="550"></img>
                 </div>
 
 

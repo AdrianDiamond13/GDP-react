@@ -32,7 +32,7 @@ class Diamond extends Component{
     load(){
         this.loader.load(
             // resource URL
-            '../../assets/diamond_object/scene.gltf',
+            '../../diamond_object/scene.gltf',
             // called when the resource is loaded
              ( gltf ) => {
         
