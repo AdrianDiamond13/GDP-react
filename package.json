@@ -3,9 +3,13 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon server/server.js",
+        "start": "node server/server.js",
         "build-webpack": "webpack",
         "webpack-dev": "webpack-dev-server"
+    },
+    "engines": {
+        "node": "10.15.3",
+        "npm": "6.4.1"
     },
     "author": "Adrian Diamond",
     "license": "ISC",

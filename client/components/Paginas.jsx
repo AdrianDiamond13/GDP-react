@@ -161,7 +161,7 @@ class Pages extends Component{
         // console.log('this.state[this.state.currentPage]',this.state[this.state.currentPage])
 
         return(
-            <div className={pagesStyle}>
+            <div className={pagesStyle} id='conveyor'>
        
         
     <div className='page1' id='home'onTouchStart={this.p1onTouchStart} onTouchMove={this.p1onTouchMove} onTouchEnd={this.p1onTouchEnd}>Home</div>

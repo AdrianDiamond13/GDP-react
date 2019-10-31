@@ -80,15 +80,27 @@ class Pages extends Component{
         //Moving Right
         // if(change<0){
             // console.log("MOVING RIGHT BITCH")
-            this.current.style.left = Math.abs(change) + 'px';
-            this.prev.style.display = 'block';
-            this.prev.style.left = '-' + (screen.width + change) + 'px'
+            // this.current.style.left = Math.abs(change) + 'px';
+            // this.prev.style.display = 'block';
+            // this.prev.style.left = '-' + (screen.width + change) + 'px'
         // }else if (change >0){
             // console.log("MOVING LEFT BITCH")
-            this.current.style.left = '-' + change + 'px';
-            this.next.style.display = 'block';
-           this.next.style.left = (screen.width - change) + 'px'
-        // }   
+        //     this.current.style.left = '-' + change + 'px';
+        //     this.next.style.display = 'block';
+        //    this.next.style.left = (screen.width - change) + 'px'
+        // }
+        
+        // while(moving right){
+        //     if(touch.screenX > this.startingX){
+        //         this.current.style.left = Math.abs(change) + 'px';
+        //         this.prev.style.left = (-screen.width + Math.abs(change)) + 'px';
+        //     }
+        //     if(touch.screenX < this.startingX){
+        //         this.next.style.left+=Math.abs(change) + 'px';
+        //         this.current.style.left = 
+        //     }
+        // }
+        
     }
 
     // if(change < 0){
