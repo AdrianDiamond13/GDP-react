@@ -97,7 +97,7 @@ class Diamond extends Component{
     
     //ADD CAMERA
     this.camera = new THREE.PerspectiveCamera(75, width/height, 0.1, 1000)
-    this.camera.position.z = 10    
+    this.camera.position.z = 5    
     
     //ADD RENDERER
     this.renderer = new THREE.WebGLRenderer({ antialias: true })
