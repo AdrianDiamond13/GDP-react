@@ -6,10 +6,19 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Futura PT';
+    src: url('FuturaPT-Medium.woff2') format('woff2'),
+        url('FuturaPT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
 
 body {
     margin: 0;
     font-family: 'Futura PT';
+    background-color: black;
 }
 
 // .page{
@@ -102,6 +111,11 @@ body {
     background-color: black;
     color: greenyellow;
     border: 1px dotted greenyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: 60%;
 }
 
 
@@ -112,6 +126,7 @@ body {
 
 .hidden{
     display: none;
+    // visibility: hidden;
 }
 #show{
 
@@ -218,17 +233,23 @@ body {
     font-size: 20;
 }
 
+// .home-view h1{
+//     float:right;
+// }
+
 .about-view{
     color: lime;
     display: flex;
     flex-direction: row;
-    //justify-content: flex-end;
-    width: 50%;
+    justify-content: flex-end;
+    width: 90%;
     //border: 5px;
     //border-style: solid;
     border-color: lime;
     padding: 30px;
 }
+
+
 
 .films-view{
     display: flex;
@@ -240,7 +261,7 @@ body {
 
 .film-views-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     //transition-timing-function: ease;
     //-webkit-transition-timing-function: ease;
@@ -264,40 +285,41 @@ body {
 .thefirebug-view{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
-    font-size: 20px;
+    // font-size: 20px;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 100%;
-    margin: 20px;
+    margin: 5px;
 }
 
 .thefirebug-poster{
     height: 100%;
     //background-color: rgb(136, 0, 0);
-    width: 45%;
+    // width: 45%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
 }
 
 .thefirebug-content{
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 50%;
     padding: 10px;
 }
 
 .thefirebug-title{
     display:flex;
     justify-content: center;
+    font-family: 'burnt-paper';
 }
 
 .thefirebug-info{
     border: 2px;
     border-style: solid;
     border-color: rgb(59, 1, 1);
-    padding: 20px;
+    padding: 5px;
+    font-size: 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -344,4 +366,20 @@ body {
     //opacity: 1; 
   }
 
-  
+  .music-view-container{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      height: 75%;
+      width:100%;
+  }
+
+ .heaven-info{
+     margin: 0;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ .heaven-info p{
+     margin: 0;
+ }

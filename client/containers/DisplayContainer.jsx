@@ -8,6 +8,7 @@ import TheFirebugView from '../components/TheFirebugView.jsx';
 import GenerationsView from '../components/GenerationsView.jsx';
 import TheNightFromHellView from '../components/TheNightFromHellView.jsx';
 import Diamond from '../components/Diamond.jsx';
+import ContactView from '../components/ContactView.jsx';
 //import components for the routes
 
 
@@ -54,7 +55,7 @@ class DisplayContainer extends Component {
                 />
 
                 {/* FILMS */}
-                <Route
+                {/* <Route
                     exact path='/films'
                     component={FilmsView}
                 />
@@ -65,20 +66,20 @@ class DisplayContainer extends Component {
                 <Route
                     exact path='/shorts'
                     component={FilmsView}
-                />
+                /> */}
                 {/* FILM CONTENT VIEWS */}
                 <Route
                 exact path='/thefirebug'
                 render={(props) => <TheFirebugView changeDisplay={this.changeDisplay}/>}
                 />
-                <Route
+                {/* <Route
                     exact path='/generations'
                     render={(props) => <GenerationsView changeDisplay={this.changeDisplay} />}
                 />
                 <Route
                     exact path='/thenightfromhell'
                     render={(props) => <TheNightFromHellView changeDisplay={this.changeDisplay} />}
-                />
+                /> */}
 
 
                 <Route
@@ -95,7 +96,8 @@ class DisplayContainer extends Component {
                 />
                 <Route
                     exact path='/contact'
-                    render={() => <h1>Adrian@GreenDiamondProjects.com</h1>}
+                    render={(props) => <ContactView/>}
+                    // render={() => <h1>Adrian@GreenDiamondProjects.com</h1>}
                 />
             </Switch>
         </div>

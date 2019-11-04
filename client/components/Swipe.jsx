@@ -7,6 +7,8 @@ import MenuItem from '../components/MenuItemComponent.jsx'
 import DisplayContainer from '../containers/DisplayContainer.jsx';
 import { Link , Redirect , withRouter } from 'react-router-dom';
 import TheFirebugView from './TheFirebugView.jsx';
+import MusicView from './MusicView.jsx';
+import ContactView from './ContactView.jsx';
 // import { NONAME } from 'dns';
 
 
@@ -26,7 +28,8 @@ class Swipe extends Component{
             6: 'contact'
             },
             currentIndex: 0,
-            page: 'home'
+            page: 'home', 
+            showFilmsView: true
         }
 
         //
@@ -36,9 +39,16 @@ class Swipe extends Component{
         this.conveyor;
 
         //BIND METHODS
-      
+      this.hideFilmView = this.hideFilmView.bind(this)
 
 
+    }
+
+    hideFilmView(){
+        console.log("clicked!!!")
+        this.setState((prevState) => {
+            return {showFilmsView: !prevState.showFilmsView} 
+        }, ()=> console.log("this.state.showFilmsView", this.state.showFilmsView))
     }
 
    
@@ -49,6 +59,7 @@ class Swipe extends Component{
 
     render(){
         let showSwipe = this.props.state.showDiamond? "hidden": "show";
+        let showView =this.props.state.showFilmsView? "show":"hidden";
         // let page = (this.state.page === this.state[this.state.currentPage])? "page1": "page2";
         // console.log('this.state[this.state.currentPage]',this.state[this.state.currentPage])
 
@@ -57,20 +68,32 @@ class Swipe extends Component{
             <div className='swipeView' id={showSwipe}>
        
         
-    <section className='page' id='home'>Home
-    <HomeView/>
+    <section className='page' id='home'>
+    <HomeView toggle={this.props.toggle}/>
     </section>
+    
     <section className='page' id='about'>About
+
     <AboutView/>
     </section>
-    <section className='page' id='films'>Films
-    <FilmsView/>
-    <DisplayContainer/>
+    
+    <section className='page' id='films'>Coming Soon
+    {/* <FilmsView className={showView} hideFilmView={this.hideFilmView}/> */}
+    {/* <DisplayContainer/> */}
+    <TheFirebugView/>
     </section>
-    <section className='page' id='tv'>TV</section>
-    <section className='page' id='music'>Music</section>
-    <section className='page' id='arvr'>AR/VR</section> 
-    <section className='page' id='contact'>Contact</section>
+    
+    {/* <section className='page' id='tv'>TV</section> */}
+    
+    <section className='page' id='music'>Directing
+    <MusicView/>
+    </section>
+    
+    {/* <section className='page' id='arvr'>AR/VR</section>  */}
+
+    <section className='page' id='contact'>Contact
+    <ContactView/>
+    </section>
 
 </div>
             

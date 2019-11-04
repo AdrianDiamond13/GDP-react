@@ -18,6 +18,7 @@ class FilmsView extends Component {
 
     changeFont(e){
         this.showModal(e);
+        this.props.hideFilmView()
     }
 
     showModal(e){
@@ -37,11 +38,11 @@ class FilmsView extends Component {
                 
                 <div className="films-view">
                 <MenuItem component={Link} to={'/features'} name='FEATURE FILMS' id="features" state ={this.state} changeFont={this.changeFont}></MenuItem>
-                <MenuItem component={Link} to={'/shorts'} name='SHORT FILMS' id="shorts" state ={this.state} changeFont={this.changeFont}></MenuItem>
+                {/* <MenuItem component={Link} to={'/shorts'} name='SHORT FILMS' id="shorts" state ={this.state} changeFont={this.changeFont}></MenuItem> */}
                 </div>
                 
                 <div>
-                <Modal state={this.state} changeFont={this.changeFont}/>
+                <Modal state={this.state} changeFont={this.changeFont} hideFilmView={this.props.hideFilmView}/>
                 </div>
 
             </div>

@@ -104,13 +104,6 @@ class Diamond extends Component{
     this.renderer.setClearColor('#000000')
     this.renderer.setSize(window.innerWidth, window.innerHeight)
     this.mount.appendChild(this.renderer.domElement)    
-    
-    //ADD CUBE
-    // const geometry = new THREE.BoxGeometry(1, 1, 1)
-    // const material = new THREE.MeshBasicMaterial({ color: '#008000'     })
-    // this.cube = new THREE.Mesh(geometry, material)
-    // this.scene.add(this.cube)
-    // this.start()
 
     //ADD DIAMOND
     this.load()
@@ -184,17 +177,7 @@ class Diamond extends Component{
 }
 render(){
     let diamondClass = this.props.state.showDiamond? "show":"hidden"
-    // console.log("diamondClass", diamondClass)
-    //PROPS ARE NOT BEING PASSED DOWN!!!
-    // console.log("this.props.state", this.props.state)
-    // console.log('this.props.toggle', this.props.toggle)
-    // console.log("this.props", this.props)
-    // if (!this.props.state.showDiamond) {
-    //   console.log("REDIRECT!")
-    //   return <Redirect push to="/main" exact />;
-    // }
   
-    
 
 
     return(

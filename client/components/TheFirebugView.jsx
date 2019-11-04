@@ -10,54 +10,58 @@ class TheFirebugView extends Component{
         this.state={
             showPopup: false
         }
-        this.togglePopup = this.togglePopup.bind(this);
+        // this.togglePopup = this.togglePopup.bind(this);
     }
    
     //Change the Display to accomodate film content before mounting TheFirebugView component
-    componentDidMount(){
-        this.props.changeDisplay()
-    }
+    // componentDidMount(){
+    //     this.props.changeDisplay()
+    // }
     //Change the Display back to normal once you've unmounted TheFirebugView component
-    componentWillUnmount(){
-        this.props.changeDisplay()
-    }
+    // componentWillUnmount(){
+    //     this.props.changeDisplay()
+    // }
 
-    togglePopup() {  
-        this.setState({  
-            showPopup: !this.state.showPopup  
-        });  
-    }  
+    // togglePopup() {  
+    //     this.setState({  
+    //         showPopup: !this.state.showPopup  
+    //     });  
+    // }  
 
     render(){
         return(
             <div className="thefirebug-view">
 
+                <div className="thefirebug-title">
+                        <h1>THE FIREBUG</h1>
+                    </div>
+
                 <div className="thefirebug-poster">
                     {/* POSTER IMAGE HERE */}
-                    <img src="../../thefirebug_specposter.jpg" alt="The Firebug Poster" width="330" height="550"></img>
+                    <img className="thefirebug-poster" src="../../thefirebug_specposter.jpg" alt="The Firebug Poster" width='100%' height= 'auto'></img>
                 </div>
 
 
                 <div className="thefirebug-content">
                     
-                    <div className="thefirebug-title">
-                        <h1>THE FIREBUG</h1>
-                    </div>
+                   
 
                     <div className="thefirebug-info">
-                        <li>Starring: Letitia Wright</li>
-                        <li>Genre: Thriller, Suspense</li>
-                        <li>Audience: #MeToo</li>
-                        <p>Logline: When a traumatized young woman discovers that her father, a charismatic police officer, 
-                        is domestically abusing his new wife, it awakens her long-suppressed impulse to commit arson.</p>
+                        <p>Genre: Slowburn Thriller with Horror Elements</p>
+                        <p>Logline: When a young woman haunted by memories of domestic violence discovers that her father - the charismatic Sheriff of a small desert town -
+                        has been abusing his new wife, it awakens an old impulse to commit arson.</p>
                         
                         <div className="thefirebug-links-box">
-                            <div onClick={this.togglePopup}>
+                            {/* <div onClick={this.togglePopup}>
                             <h3 className="thefirebug-links">Watch Sizzle</h3>
-                            </div>
+                            </div> */}
+
+                        <Link to="/contact" style={{ textDecoration: 'none' }}>
+                            <h3 className="thefirebug-links">Request Castlist</h3> 
+                        </Link>
 
                             {/* THE MODAL WILL POP UP HERE */}
-                            {this.state.showPopup ?  <VideoModal togglePopup={this.togglePopup}/> : null}  
+                            {/* {this.state.showPopup ?  <VideoModal togglePopup={this.togglePopup}/> : null}   */}
     
                         <Link to="/contact" style={{ textDecoration: 'none' }}>
                             <h3 className="thefirebug-links">Request Screenplay</h3> 

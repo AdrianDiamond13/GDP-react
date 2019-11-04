@@ -18,7 +18,8 @@ class ReactContainer extends Component {
   constructor(props) {
     super(props);
     this.state={
-        showDiamond: true
+        showDiamond: true,
+        showView: true
     }
     this.toggle= this.toggle.bind(this);  
   }
@@ -28,46 +29,16 @@ class ReactContainer extends Component {
         return {showDiamond: !prevState.showDiamond};
       });
       console.log('clicked!')
-      //console.log(this.state)
   }
 
   render() {
     return(
       
-      
       <div>   
 
 <Diamond toggle={this.toggle} state={this.state}/>
-<Swipe state={this.state}/>
+<Swipe toggle={this.toggle} state={this.state}/>
 
-
-          {/* <Switch>
-          <Route
-          exact path='/'
-          render={()=><Diamond toggle={this.toggle} state={this.state}/>}
-          />
-          <Route
-        exact path='/main'
-        render={()=><MainContainer toggle={this.toggle} state={this.state}/>}
-          />
-          </Switch> */}
-         
-          
-
-
-
-
-       {/* <Switch>
-                <Route
-                    exact path='/'
-                    component={Diamond}
-                    />
-                <Route
-                    path='/main'
-                    component={MainContainer}
-                    //render={(props)=><div className="maincontainer"><MenuContainer/><DisplayContainer/></div>}
-                    />
-        </Switch> */}
       </div> 
     )
   }
@@ -75,9 +46,4 @@ class ReactContainer extends Component {
 }
 
 
-
-
-
-
-//export default connect(mapStateToProps, mapDispatchToProps)(MainContainer);
 export default ReactContainer;
