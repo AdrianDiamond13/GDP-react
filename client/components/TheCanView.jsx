@@ -16,13 +16,15 @@ class TheCanView extends Component{
 
                 <div className="thefirebug-title">
                         <h1>"THE CAN"</h1>
-                        <h4>(In development)</h4>
+                        <p>(In development)</p>
                     </div>
 
             <div className='image-swipeView'>
                     {/* POSTER IMAGES HERE */}
                     <img className="can-images" src="../../Cliff_animation.PNG" alt="Cliff" width='100%' height= 'auto'></img>
+                    <img className="can-images" src="../../Mike_animation.PNG" alt="Mike" width='100%' height= 'auto'></img>
                     <img className="can-images" src="../../Riley_animation.jpg" alt="Riley" width='100%' height= 'auto'></img>
+
             </div>
 
 
@@ -32,8 +34,8 @@ class TheCanView extends Component{
 
                     <div className="thefirebug-info">
                         <p>Genre: Live Action Comedy-Drama Series</p>
-                        <p>Logline: While pursuing his dream of becoming a rockstar, an ambitious but lonely young musician earns his living working in a quirky coffeehouse called "The Can," home to an increasingly dysfunctional community of misfits and open mic performers.</p> 
-                        <p>Comps: "Cheers," "Girls," "Entourage."</p>
+                        <p>Logline: While struggling to realize his rockstar dream, a socially anxious young musician takes a job in a quirky coffeehouse called "The Can," home to an increasingly dysfunctional community of misfits and open mic performers.</p> 
+                        <p>Comps: "Cheers," "Girls," "Entourage," "Crashing," "My So-Called Life"</p>
                         
                         <div className="thefirebug-links-box">
                             {/* <div onClick={this.togglePopup}>
