@@ -6,13 +6,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Futura PT';
-    src: url('FuturaPT-Medium.woff2') format('woff2'),
-        url('FuturaPT-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
 
 
 body {
@@ -21,59 +14,19 @@ body {
     background-color: black;
 }
 
-// .page{
+
+// #conveyor{
+//     position:fixed;
+//     // position:absolute;
 //     // position: relative;
-//     // top: 0;
-//     // left: 0;
-//     width: 100vw;
-//     height: 100vh;
-//     background-color:black;
-//     color: greenyellow;
-//     border: 2px dotted greenyellow;
+//     display: flex;
+//     flex-direction: row;
+//     background-color: aquamarine;
+//     overflow: hidden;
+//     margin:0px;
+//     // left: 0px;
 // }
 
-
-
-#conveyor{
-    position:fixed;
-    // position:absolute;
-    // position: relative;
-    display: flex;
-    flex-direction: row;
-    background-color: aquamarine;
-    overflow: hidden;
-    margin:0px;
-    // left: 0px;
-}
-
-// .currentPage{
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100vw;
-//     height: 100vh;
-//     background-color:black;
-//     color: greenyellow;
-// }
-// .nextPage{
-//     position: absolute;
-//     top: 0;
-//     left: 100%;
-//     width: 100vw;
-//     height: 100vh;
-//     background-color:greenyellow;
-//     color: black;
-// }
-
-// .prevPage{
-//     position: absolute;
-//     top: 0;
-//     left: -100%;
-//     width: 100vw;
-//     height: 100vh;
-//     background-color:blue;
-//     color: white;
-// }
 
 .swipeView {
     display: grid;
@@ -95,17 +48,6 @@ body {
     scroll-snap-align: start;
   }
   
-//   .green {
-//     background: #ABE66F;
-//   }
-  
-//   .purple {
-//     background: #4E4E94;
-//   }
-  
-//   .orange {
-//     background: #FD8F58;
-//   }
 
 .page{
     background-color: black;
@@ -115,8 +57,32 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    justify-content: 60%;
+    // justify-content: 60%;
 }
+
+.image-swipeView {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    // display:flex;
+    // flex-direction: row;
+    will-change: transform;
+    align-content: center;
+    overflow-x: auto;
+    scroll-snap-coordinate: 0 0;
+    scroll-snap-points-x: repeat(100%);
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .can-images {
+    // height: 100vh;
+    // width:100vw;
+    scroll-snap-align: start;
+    // height: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+  }
 
 
 
@@ -167,10 +133,6 @@ body {
     margin-right: auto 
 }
 
-// .menu h3{
-//     font-size: 25px;
-//     //text-decoration: none;
-// }
 
 .menu-item{
     font-size: 25px;
@@ -233,9 +195,6 @@ body {
     font-size: 20;
 }
 
-// .home-view h1{
-//     float:right;
-// }
 
 .about-view{
     color: lime;
@@ -263,21 +222,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    //transition-timing-function: ease;
-    //-webkit-transition-timing-function: ease;
-    // opacity: 0;
-    //opacity: 0.5;
-    // transition-property: opacity;
-    // transition-duration: 1s;
-	// transition-delay: .2s;
-	// transition-timing-function: ease;
-    
 }
 
 .modal-view{
-    // border: 5px;
-    // border-style: solid;
-    // border-color: black;
     padding: 5px;
     color: rgb(39, 39, 39);
 }
@@ -298,7 +245,7 @@ body {
     // width: 45%;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
+    align-items: center;
 }
 
 .thefirebug-content{
@@ -310,8 +257,15 @@ body {
 
 .thefirebug-title{
     display:flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     font-family: 'burnt-paper';
+}
+.thefirebug-title h1{
+    margin: 0;
+}
+.thefirebug-title h4{
+    margin: 0;
 }
 
 .thefirebug-info{
@@ -319,7 +273,7 @@ body {
     border-style: solid;
     border-color: rgb(59, 1, 1);
     padding: 5px;
-    font-size: 10px;
+    font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -330,7 +284,7 @@ body {
 }
 
 .thefirebug-links{
-    color: rgb(59, 1, 1);
+    color: rgb(196, 48, 3);
     cursor: pointer;
 }
 

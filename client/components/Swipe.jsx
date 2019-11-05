@@ -9,6 +9,7 @@ import { Link , Redirect , withRouter } from 'react-router-dom';
 import TheFirebugView from './TheFirebugView.jsx';
 import MusicView from './MusicView.jsx';
 import ContactView from './ContactView.jsx';
+import TheCanView from './TheCanView.jsx';
 // import { NONAME } from 'dns';
 
 
@@ -77,13 +78,15 @@ class Swipe extends Component{
     <AboutView/>
     </section>
     
-    <section className='page' id='films'>Coming Soon
+    <section className='page' id='films'>Film
     {/* <FilmsView className={showView} hideFilmView={this.hideFilmView}/> */}
     {/* <DisplayContainer/> */}
     <TheFirebugView/>
     </section>
     
-    {/* <section className='page' id='tv'>TV</section> */}
+    <section className='page' id='tv'>TV
+    <TheCanView/>
+    </section>
     
     <section className='page' id='music'>Directing
     <MusicView/>

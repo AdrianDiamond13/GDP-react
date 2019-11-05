@@ -33,12 +33,13 @@ class TheFirebugView extends Component{
             <div className="thefirebug-view">
 
                 <div className="thefirebug-title">
-                        <h1>THE FIREBUG</h1>
+                        <h1>"The Firebug"</h1>
+                        <h4>(In development)</h4>
                     </div>
 
                 <div className="thefirebug-poster">
                     {/* POSTER IMAGE HERE */}
-                    <img className="thefirebug-poster" src="../../thefirebug_specposter.jpg" alt="The Firebug Poster" width='100%' height= 'auto'></img>
+                    <img className="thefirebug-poster" src="../../thefirebug_specposter.jpg" alt="The Firebug Poster" width='95%' height= 'auto'></img>
                 </div>
 
 
