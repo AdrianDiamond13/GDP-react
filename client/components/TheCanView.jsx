@@ -21,10 +21,13 @@ class TheCanView extends Component{
 
             <div className='image-swipeView'>
                     {/* POSTER IMAGES HERE */}
-                    <img className="can-images" src="../../Cliff_animation.PNG" alt="Cliff" width='100%' height= 'auto'></img>
-                    <img className="can-images" src="../../Mike_animation.PNG" alt="Mike" width='100%' height= 'auto'></img>
-                    <img className="can-images" src="../../Riley_animation.jpg" alt="Riley" width='100%' height= 'auto'></img>
+                    {/* <div className='image-holder'> */}
 
+                    <img className="can-images" src="../../Cliff_animation.PNG" alt="Cliff" height= 'auto' width='100%' ></img>
+                    <img className="can-images" src="../../Mike_animation.PNG" alt="Mike" height='auto' width= '100%'></img>
+                    <img className="can-images" src="../../Riley_animation.jpg" alt="Riley" height='auto' width= '100%'></img>
+
+                    {/* </div> */}
             </div>
 
 
@@ -42,16 +45,16 @@ class TheCanView extends Component{
                             <h3 className="thefirebug-links">Watch Sizzle</h3>
                             </div> */}
 
-                        <Link to="/contact" style={{ textDecoration: 'none' }}>
-                            <h3 className="thefirebug-links">Request Series bible</h3> 
-                        </Link>
+                        {/* <Link to="/contact" style={{ textDecoration: 'none' }}> */}
+                            {/* <h3 className="thefirebug-links" onClick={() => window.location.href = "mailto:adrian@greendiamondprojects.com?subject=Request for 'The Can' series bibl"}>Request Series bible</h3>  */}
+                        {/* </Link> */}
 
                             {/* THE MODAL WILL POP UP HERE */}
                             {/* {this.state.showPopup ?  <VideoModal togglePopup={this.togglePopup}/> : null}   */}
     
-                        <Link to="/contact" style={{ textDecoration: 'none' }}>
-                            <h3 className="thefirebug-links">Request Pilot script</h3> 
-                        </Link>
+                        {/* <Link to="/contact" style={{ textDecoration: 'none' }}> */}
+                            <h3 className="thefirebug-links" onClick={() => window.location.href = "mailto:adrian@greendiamondprojects.com?subject=Request for 'The Can' pilot"}>Request Pilot script</h3> 
+                        {/* </Link> */}
 
 
                        

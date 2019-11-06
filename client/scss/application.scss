@@ -89,12 +89,14 @@ html, body {
     margin: 5px;
     max-width: 100%;
     overflow-y: hidden;
+    // position: relative;
   }
 
   .can-images {
     // height: 100vh;
     // width:100vw;
     scroll-snap-align: start;
+    margin-top: 20%;
     // height: auto;
     // height: 100%;
     // margin: 0;
@@ -102,6 +104,10 @@ html, body {
     // flex-direction: column;
     // align-items: center;
   }
+
+//   .image-holder{
+      
+//   }
 
 
 
@@ -249,14 +255,14 @@ html, body {
 }
 
 .thefirebug-view{
-    position: relative;
+    // position: relative;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
     // font-size: 20px;
     display:flex;
     flex-direction: column;
     height: 90%;
-    margin: 5%;
+    // margin: 5%;
     font-size: auto;
 }
 
@@ -280,6 +286,7 @@ html, body {
     margin: 2%;
     overflow-x: hidden;
     // max-height: 80%;
+    margin-bottom: 5%;
 }
 
 .thefirebug-title{
@@ -289,6 +296,7 @@ html, body {
     align-items: center;
     font-family: 'burnt-paper';
     font-size: auto;
+    margin-top: 2px;
 }
 .thefirebug-title h1{
     margin: 0;
@@ -317,6 +325,11 @@ html, body {
     color: rgb(196, 48, 3);
     cursor: pointer;
 }
+
+.thefirebug-links:hover{
+    cursor: pointer;
+}
+
 
 // .videomodal-bg{
 //     display:flex;

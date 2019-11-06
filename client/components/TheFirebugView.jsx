@@ -59,16 +59,16 @@ class TheFirebugView extends Component{
                             <h3 className="thefirebug-links">Watch Sizzle</h3>
                             </div> */}
 
-                        <Link to="/contact" style={{ textDecoration: 'none' }}>
-                            <h3 className="thefirebug-links">Request Castlist</h3> 
-                        </Link>
+                        {/* <Link to="/contact" style={{ textDecoration: 'none' }}> */}
+                            <h3 className="thefirebug-links" onClick={() => window.location.href = "mailto:adrian@greendiamondprojects.com?subject=Request for 'The Firebug' castlist"}>Request Castlist</h3> 
+                        {/* </Link> */}
 
                             {/* THE MODAL WILL POP UP HERE */}
                             {/* {this.state.showPopup ?  <VideoModal togglePopup={this.togglePopup}/> : null}   */}
     
-                        <Link to="/contact" style={{ textDecoration: 'none' }}>
-                            <h3 className="thefirebug-links">Request Screenplay</h3> 
-                        </Link>
+                        {/* <Link to="/contact" style={{ textDecoration: 'none' }}> */}
+                            <h3 className="thefirebug-links" onClick={() => window.location.href = "mailto:adrian@greendiamondprojects.com?subject=Request for 'The Firebug' screenplay"}>Request Screenplay</h3> 
+                        {/* </Link> */}
 
 
                        

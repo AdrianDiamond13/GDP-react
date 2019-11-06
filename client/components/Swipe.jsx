@@ -5,7 +5,7 @@ import AboutView from './AboutView.jsx'
 import FilmsView from './FilmsView.jsx';
 import MenuItem from '../components/MenuItemComponent.jsx'
 import DisplayContainer from '../containers/DisplayContainer.jsx';
-import { Link , Redirect , withRouter } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import TheFirebugView from './TheFirebugView.jsx';
 import MusicView from './MusicView.jsx';
 import ContactView from './ContactView.jsx';
