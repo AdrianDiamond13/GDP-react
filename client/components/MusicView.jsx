@@ -9,17 +9,19 @@ const MusicView = props => (
         </iframe> */}
 
        
-        <iframe width="95%" height="95%"
+        <iframe width="95%" height="80%"
        src="https://www.youtube.com/embed/kd55rVz8rMs" 
        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
        allowfullscreen>
         </iframe>
-        <div className="heaven-info">
+       
+
+        {/* <div className="heaven-info">
         <h3>H E A V E N</h3>
         <p>An Acoustic Mystery</p>
         <p>Written & Directed by</p>
         <p>Adrian Diamond</p>
-        </div>
+        </div> */}
     </div>
 
 
