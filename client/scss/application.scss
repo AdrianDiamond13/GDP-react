@@ -85,7 +85,7 @@ html, body {
     scroll-snap-points-x: repeat(100%);
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    margin-top: 2px;
+    margin-top: 5px;
     // height: 100%; 
     // overflow: hidden;
     // margin: 5px;
@@ -298,6 +298,7 @@ html, body {
 
 .thefirebug-image{
     align-self: center;
+    display: block;
 }
 
 .thefirebug-content{
