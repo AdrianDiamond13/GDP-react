@@ -19,7 +19,6 @@ class TheCanView extends Component{
                         <p>(In development)</p>
                     </div>
 
-                {/* <div className="thefirebug-content"> */}
             <div className='image-swipeView'>
                     {/* POSTER IMAGES HERE */}
 
@@ -30,6 +29,7 @@ class TheCanView extends Component{
             </div>
 
 
+                <div className="thefirebug-content">
                     
                    
 
@@ -60,7 +60,7 @@ class TheCanView extends Component{
                     </div>
                 </div>
 
-            // </div>
+            </div>
         )
     };
         

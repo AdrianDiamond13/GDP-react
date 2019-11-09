@@ -31,7 +31,6 @@ class TheFirebugView extends Component{
     render(){
         return(
             <div className="thefirebug-view">
-                {/* <div className="thefirebug-content"> */}
 
                 <div className="thefirebug-title">
                         <h1>"The Firebug"</h1>
@@ -40,7 +39,7 @@ class TheFirebugView extends Component{
 
                 <div className="thefirebug-poster">
                     {/* POSTER IMAGE HERE */}
-                    <img className="thefirebug-poster" src="../../thefirebug_specposter.jpg" alt="The Firebug Poster" height='100%' width='auto'></img>
+                    <img src="../../thefirebug_specposter.jpg" alt="The Firebug Poster" height='100%' width='auto'></img>
                 </div> 
 
                  {/* <div className='image-swipeView'> */}
@@ -50,6 +49,7 @@ class TheFirebugView extends Component{
 
 
                     
+                <div className="thefirebug-content">
                    
 
                     <div className="thefirebug-info">
@@ -81,7 +81,7 @@ class TheFirebugView extends Component{
                     </div>
                 </div>
 
-            // </div>
+         </div>
         )
     };
         
