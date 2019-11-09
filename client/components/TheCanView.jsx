@@ -21,11 +21,9 @@ class TheCanView extends Component{
 
             <div className='image-swipeView'>
                     {/* POSTER IMAGES HERE */}
-
                     <img className="can-images" src="../../Cliff_animation.PNG" alt="Cliff"  height='auto' width= '100%'></img>
                     <img className="can-images" src="../../Mike_animation.PNG" alt="Mike"  height='auto' width= '100%'></img>
                     <img className="can-images" src="../../Riley_animation.jpg" alt="Riley"  height='auto' width= '100%'></img>
-
             </div>
 
 

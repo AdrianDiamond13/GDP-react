@@ -50,6 +50,7 @@ html, body {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     margin-top: 2%;
+    // width: 60%;
   }
   
   section {
@@ -88,9 +89,10 @@ html, body {
     // height: 100%; 
     // overflow: hidden;
     // margin: 5px;
-    max-width: 100%;
+    max-width: 70%;
     overflow-y: hidden;
     // position: relative;
+    align-self: center;
   }
 
   .can-images {
@@ -333,8 +335,8 @@ html, body {
     padding: 2%;
     font-size: auto;
     // font-family: Arial, Helvetica, sans-serif;
-    flex-wrap: wrap;
-    margin: 5px;
+    // flex-wrap: wrap;
+    // margin: 5px;
 }
 
 .thefirebug-links-box{
