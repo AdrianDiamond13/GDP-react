@@ -39,7 +39,7 @@ html, body {
 
 .swipeView {
     display: grid;
-    grid-template-columns: repeat(7, 100%);
+    grid-template-columns: repeat(6, 100%);
     // display:flex;
     // flex-direction: row;
     will-change: transform;
@@ -80,7 +80,7 @@ html, body {
     // flex-direction: row;
     will-change: transform;
     align-content: center;
-    overflow-x: auto;
+    overflow-x: scroll;
     scroll-snap-coordinate: 0 0;
     scroll-snap-points-x: repeat(100%);
     scroll-snap-type: x mandatory;
@@ -96,11 +96,14 @@ html, body {
     align-self: center;
   }
 
+
+
   .can-images {
     // height: 100vh;
     // width:100vw;
     scroll-snap-align: start;
     object-fit: contain;
+    // overflow: visible;
     // margin-top: 10%;
     // height: auto;
     // height: 100%;
@@ -269,6 +272,8 @@ html, body {
     height: 90%;
     // margin: 5%;
     font-size: auto;
+    margin-bottom: 2%;
+
 }
 
 // .thefirebug-poster{
