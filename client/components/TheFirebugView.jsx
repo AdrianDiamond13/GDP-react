@@ -31,7 +31,7 @@ class TheFirebugView extends Component{
     render(){
         return(
             <div className="thefirebug-view">
-                <div className="thefirebug-content">
+                {/* <div className="thefirebug-content"> */}
 
                 <div className="thefirebug-title">
                         <h1>"The Firebug"</h1>
@@ -81,7 +81,7 @@ class TheFirebugView extends Component{
                     </div>
                 </div>
 
-            </div>
+            // </div>
         )
     };
         
