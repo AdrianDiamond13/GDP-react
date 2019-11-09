@@ -35,11 +35,11 @@ class TheFirebugView extends Component{
                 <div className="thefirebug-title">
                         <h1>"The Firebug"</h1>
                         <p>(In development)</p>
+                    <img className="thefirebug-image" src="../../thefirebug_specposter.jpg" alt="The Firebug Poster" width='50%' height='auto'></img>
                     </div>
 
                 {/* <div className="thefirebug-poster"> */}
                     {/* POSTER IMAGE HERE */}
-                    <img className="thefirebug-image" src="../../thefirebug_specposter.jpg" alt="The Firebug Poster" width='50%' height='auto'></img>
                 {/* </div>  */}
 
                  {/* <div className='image-swipeView'> */}
@@ -57,7 +57,7 @@ class TheFirebugView extends Component{
                         <p>Logline: When a young woman haunted by horrific memories of domestic violence discovers that her father - the charismatic Sheriff of a small desert town -
                         has been abusing his new wife, it awakens an old impulse to commit arson.</p>
                         <p> Comps: "Se7en" , "No Country For Old Men" , "Memento" , "Unsane"</p>
-                        <p> Budget: $5 million</p>
+                        {/* <p> Budget: $5 million</p> */}
                         
                         <div className="thefirebug-links-box">
                             {/* <div onClick={this.togglePopup}>
