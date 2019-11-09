@@ -31,13 +31,13 @@ class TheFirebugView extends Component{
     render(){
         return(
             <div className="thefirebug-view">
+                <div className="thefirebug-content">
 
                 <div className="thefirebug-title">
                         <h1>"The Firebug"</h1>
                         <p>(In development)</p>
                     </div>
 
-                <div className="thefirebug-content">
                 <div className="thefirebug-poster">
                     {/* POSTER IMAGE HERE */}
                     <img className="thefirebug-poster" src="../../thefirebug_specposter.jpg" alt="The Firebug Poster" height='100%' width='auto'></img>
