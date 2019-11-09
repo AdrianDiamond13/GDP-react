@@ -35,7 +35,12 @@ class TheFirebugView extends Component{
                 <div className="thefirebug-title">
                         <h1>"The Firebug"</h1>
                         <p>(In development)</p>
-                    <img className="thefirebug-image" src="../../thefirebug_specposter.jpg" alt="The Firebug Poster" width='50%' height='auto'></img>
+                    {/* <img className="thefirebug-image" src="../../thefirebug_specposter.jpg" alt="The Firebug Poster" width='50%' height='auto'></img> */}
+                    </div>
+
+                    <div className='image-swipeView'>
+                    {/* POSTER IMAGES HERE */}
+                    <img className="can-images" src="../../thefirebug_specposter.jpg" alt="The Firebug Poster"  height='auto' width= '100%'></img>
                     </div>
 
                 {/* <div className="thefirebug-poster"> */}
