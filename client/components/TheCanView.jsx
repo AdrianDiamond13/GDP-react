@@ -17,6 +17,7 @@ class TheCanView extends Component{
                 <div className="thefirebug-title">
                         <h1>"THE CAN"</h1>
                         <p>(In development)</p>
+                    </div>
 
             <div className='image-swipeView'>
                     {/* POSTER IMAGES HERE */}
@@ -24,7 +25,6 @@ class TheCanView extends Component{
                     <img className="can-images" src="../../Mike_animation.PNG" alt="Mike"  height='auto' width= '100%'></img>
                     <img className="can-images" src="../../Riley_animation.jpg" alt="Riley"  height='auto' width= '100%'></img>
             </div>
-                    </div>
 
 
                 {/* <div className="thefirebug-content"> */}
