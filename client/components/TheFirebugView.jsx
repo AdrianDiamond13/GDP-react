@@ -79,9 +79,6 @@ class TheFirebugView extends Component{
                         {/* <Link to="/contact" style={{ textDecoration: 'none' }}> */}
                             <h3 className="thefirebug-links" onClick={() => window.location.href = "mailto:adrian@greendiamondprojects.com?subject=Request for 'The Firebug' screenplay"}>Request Screenplay</h3> 
                         {/* </Link> */}
-
-
-                       
                         </div>
                     </div>
                 </div>
