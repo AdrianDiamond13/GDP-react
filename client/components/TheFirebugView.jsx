@@ -49,7 +49,7 @@ class TheFirebugView extends Component{
 
 
                     
-                <div className="thefirebug-content">
+                {/* <div className="thefirebug-content"> */}
                    
 
                     <div className="thefirebug-info">
@@ -81,7 +81,7 @@ class TheFirebugView extends Component{
                     </div>
                 </div>
 
-         </div>
+        //  </div>
         )
     };
         

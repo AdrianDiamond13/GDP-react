@@ -27,7 +27,7 @@ class TheCanView extends Component{
                     </div>
 
 
-                <div className="thefirebug-content">
+                {/* <div className="thefirebug-content"> */}
                     
                    
 
@@ -58,7 +58,7 @@ class TheCanView extends Component{
                     </div>
                 </div>
 
-            </div>
+            // </div>
         )
     };
         
