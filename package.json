@@ -20,7 +20,7 @@
         "css-loader": "^0.28.11",
         "express": "^4.12.3",
         "lightercollective": "^0.2.0",
-        "node-sass": "^4.0.0",
+        "node-sass": "^4.13.1",
         "pg": "^7.8.0",
         "pg-promise": "^8.5.5",
         "react": "^16.2.0",
