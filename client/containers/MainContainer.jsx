@@ -40,8 +40,14 @@ component={Diamond}/>
       {/* <div className="maincontainer"> */}
       <div className={mainContainerClass}>
       <Router>
+<<<<<<< HEAD
           <MenuContainer toggle={this.props.toggle}/>
           <DisplayContainer/>
+=======
+          {/* <MenuContainer toggle={this.props.toggle}/> */}
+          <DisplayContainer/>
+        <Carousel/>
+>>>>>>> 5c70ec95aa91b33f33272ff2bab27ae74b305872
       </Router>
       </div> 
     

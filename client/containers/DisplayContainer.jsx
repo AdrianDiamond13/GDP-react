@@ -96,8 +96,12 @@ class DisplayContainer extends Component {
                 />
                 <Route
                     exact path='/contact'
+<<<<<<< HEAD
                     render={(props) => <ContactView/>}
                     // render={() => <h1>Adrian@GreenDiamondProjects.com</h1>}
+=======
+                    render={() => <h1>Adrian@GreenDiamondProjects.com</h1>}
+>>>>>>> 5c70ec95aa91b33f33272ff2bab27ae74b305872
                 />
             </Switch>
         </div>

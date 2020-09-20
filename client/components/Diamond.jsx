@@ -32,7 +32,11 @@ class Diamond extends Component{
     load(){
         this.loader.load(
             // resource URL
+<<<<<<< HEAD
             '../../diamond_object/scene.gltf',
+=======
+            '../../assets/diamond_object/scene.gltf',
+>>>>>>> 5c70ec95aa91b33f33272ff2bab27ae74b305872
             // called when the resource is loaded
              ( gltf ) => {
         
@@ -78,7 +82,11 @@ class Diamond extends Component{
           this.isMouseOver = true
           // console.log('INTERSECTION')
           this.props.toggle()
+<<<<<<< HEAD
           console.log('this.props.history', this.props.history)
+=======
+          // console.log('this.props.history', this.props.history)
+>>>>>>> 5c70ec95aa91b33f33272ff2bab27ae74b305872
           //This comes up as an TypeError...but it works so...IDK
           this.props.history('/main')
 
@@ -96,14 +104,29 @@ class Diamond extends Component{
     const height = this.mount.clientHeight    
     
     //ADD CAMERA
+<<<<<<< HEAD
     this.camera = new THREE.PerspectiveCamera(75, width/height, 0.1, 1000)
     this.camera.position.z = 5    
+=======
+    this.camera = new THREE.PerspectiveCamera(45, width/height, 0.1, 1000)
+    this.camera.position.z = 2    
+>>>>>>> 5c70ec95aa91b33f33272ff2bab27ae74b305872
     
     //ADD RENDERER
     this.renderer = new THREE.WebGLRenderer({ antialias: true })
     this.renderer.setClearColor('#000000')
     this.renderer.setSize(window.innerWidth, window.innerHeight)
     this.mount.appendChild(this.renderer.domElement)    
+<<<<<<< HEAD
+=======
+    
+    //ADD CUBE
+    // const geometry = new THREE.BoxGeometry(1, 1, 1)
+    // const material = new THREE.MeshBasicMaterial({ color: '#008000'     })
+    // this.cube = new THREE.Mesh(geometry, material)
+    // this.scene.add(this.cube)
+    // this.start()
+>>>>>>> 5c70ec95aa91b33f33272ff2bab27ae74b305872
 
     //ADD DIAMOND
     this.load()
@@ -194,4 +217,5 @@ render(){
   }
 }
 
+//By adding withRouter, you have access to three props: history, location, path.
 export default withRouter(Diamond);
