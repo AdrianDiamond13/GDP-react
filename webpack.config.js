@@ -38,11 +38,7 @@ module.exports = {
                       name: '[name].[ext]',
                       outputPath: 'fonts/'
                     }
-<<<<<<< HEAD
                   },
-=======
-                  }
->>>>>>> 5c70ec95aa91b33f33272ff2bab27ae74b305872
                 ]
                 }
                 
