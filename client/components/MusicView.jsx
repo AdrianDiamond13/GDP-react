@@ -11,8 +11,8 @@ const MusicView = props => (
        
         <iframe width="95%" height="80%"
        src="https://www.youtube.com/embed/kd55rVz8rMs" 
-       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-       allowfullscreen>
+       frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+       allowFullScreen>
         </iframe>
        
 

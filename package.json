@@ -15,6 +15,8 @@
     "author": "Adrian Diamond",
     "license": "ISC",
     "dependencies": {
+        "aframe": "^1.0.4",
+        "aframe-react": "^4.4.0",
         "css-loader": "^0.28.11",
         "express": "^4.12.3",
         "lightercollective": "^0.2.0",

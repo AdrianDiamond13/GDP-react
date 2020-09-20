@@ -10,6 +10,7 @@ import DisplayContainer from './DisplayContainer.jsx';
 import Pages from '../components/Pages.jsx';
 import Conveyor from '../components/Conveyor.jsx';
 import Swipe from '../components/Swipe.jsx';
+// import 'useState'
 
 
 
@@ -19,9 +20,11 @@ class ReactContainer extends Component {
     super(props);
     this.state={
         showDiamond: true,
-        showView: true
+        showView: true,
+        EmailModalIsOpen: false
     }
     this.toggle= this.toggle.bind(this);  
+    this.setModalIsOpen = this.setModalIsOpen.bind(this);
   }
 
   toggle(){
@@ -31,13 +34,22 @@ class ReactContainer extends Component {
       console.log('clicked!')
   }
 
+  setModalIsOpen(){
+    this.setState((prevState) => {
+      return {EmailModalIsOpen: !prevState.EmailModalIsOpen}
+    });
+    console.log("Modal button clicked")
+  }
+
+  
+
   render() {
     return(
       
       <div>   
 
 <Diamond toggle={this.toggle} state={this.state}/>
-<Swipe toggle={this.toggle} state={this.state}/>
+<Swipe toggle={this.toggle} setModalIsOpen={this.setModalIsOpen} state={this.state}/>
 
       </div> 
     )

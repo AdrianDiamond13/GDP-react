@@ -81,7 +81,7 @@ class Swipe extends Component{
     <section className='page' id='films'>Film
     {/* <FilmsView className={showView} hideFilmView={this.hideFilmView}/> */}
     {/* <DisplayContainer/> */}
-    <TheFirebugView/>
+    <TheFirebugView setModalIsOpen={this.props.setModalIsOpen} state={this.props.state}/>
     </section>
     
     <section className='page' id='tv'>TV
