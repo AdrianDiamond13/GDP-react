@@ -35,7 +35,7 @@
         "sass-loader": "^6.0.7",
         "slick-carousel": "^1.8.1",
         "style-loader": "^0.20.3",
-        "three": "^0.109.0",
+        "three": "^0.125.0",
         "three-gltf-loader": "^1.109.0",
         "webpack": "^4.28.4"
     },
